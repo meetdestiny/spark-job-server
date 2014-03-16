@@ -176,7 +176,6 @@
                   </excludes>
                 </filter>
                 <filter>
-                   <artifact>commons-logging:commons-logging</artifact>
                    <includes>
                        <include>**</include>
                    </includes>

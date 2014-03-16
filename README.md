@@ -23,7 +23,7 @@ java -cp jobserver-1.0.0-incubating-SNAPSHOT.jar spark.jobserver.JobServer
 
 <h1>Credits </h1>
 
-This is a derivative work. ALl credits goes to <a href="https://github.com/velvia">velvia</a> who open sourced the original job server. The <a href="https://github.com/apache/incubator-spark/pull/show/222/files/0c9c5a7">PR 222 </a>is  outdated and I needed a quick solution. This is a working POC for migrating the job server to scala 2.10.3 and sbt 0.13. Also, the original job server is sbt based. This is mavenized. 
+This is a derivative work. All credits goes to <a href="https://github.com/velvia">velvia</a> who open sourced the original job server. The <a href="https://github.com/apache/incubator-spark/pull/show/222/files/0c9c5a7">PR 222 </a>is  outdated and I needed a quick solution. This is a working POC for migrating the job server to scala 2.10.3 and sbt 0.13. Also, the original job server is sbt based. This is mavenized. 
 
 <h1>License</h1>
 Do whatever makes you happy with this code. No liabilities on me whatsoever. 

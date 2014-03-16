@@ -1,0 +1,42 @@
+14/03/16 08:39:27.427 INFO JobServer$: Starting JobServer with config {
+    # application.conf: 25
+    #  predefined Spark contexts
+    #  Below is an example, but do not uncomment it.   Everything defined here is carried over to
+    #  deploy-time configs, so they will be created in all environments.  :(
+    "contexts" : {},
+    # application.conf: 6
+    "jobserver" : {
+        # application.conf: 19
+        #  Time out for job server to wait while creating contexts
+        "context-creation-timeout" : "15 s",
+        # application.conf: 7
+        "port" : 8090,
+        # application.conf: 12
+        "jobdao" : "spark.jobserver.io.JobFileDAO",
+        # application.conf: 14
+        "filedao" : {
+            # application.conf: 15
+            "rootdir" : "/tmp/spark-jobserver/filedao/data"
+        },
+        # application.conf: 10
+        #  Number of job results to keep per JobResultActor/context
+        "job-result-cache-size" : 5000
+    },
+    # application.conf: 34
+    #  Default settings for ad hoc as well as manually created contexts
+    "context-settings" : {
+        # application.conf: 36
+        #  Number of cores to allocate.  Required.
+        "memory-per-node" : "512m",
+        # application.conf: 35
+        "num-cpu-cores" : 4
+    },
+    # application.conf: 4
+    "master" : "local[4]"
+}
+14/03/16 08:39:27.471 INFO JobFileDAO: rootDir is /tmp/spark-jobserver/filedao/data
+14/03/16 08:39:27.878 INFO LocalContextSupervisorActor: Starting actor spark.jobserver.LocalContextSupervisorActor
+14/03/16 08:39:27.878 INFO JarManager: Starting actor spark.jobserver.JarManager
+14/03/16 08:39:27.878 INFO JobInfoActor: Starting actor spark.jobserver.JobInfoActor
+14/03/16 08:39:28.270 INFO WebApi: Starting browser web service...
+14/03/16 08:39:28.313 INFO JobResultActor: Starting actor spark.jobserver.JobResultActor
